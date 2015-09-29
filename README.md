@@ -9,7 +9,7 @@ The properties "aggregate" and "filter" are made available as public properties.
 
 The following code snippet is from the tests for this module, and shows how the component can be instantiated and used within a Chiasm instance.
 
-```
+```javascript
 var chiasm = Chiasm();
 chiasm.plugins.dataReduction = ChiasmDataReduction;
 
