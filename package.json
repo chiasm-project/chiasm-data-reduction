@@ -23,6 +23,11 @@
   },
   "homepage": "https://github.com/chiasm-project/chiasm-data-reduction",
   "dependencies": {
-    "data-reduction": "^0.1.0"
+    "chiasm-component": "^0.2.1",
+    "data-reduction": "^0.1.1",
+    "model-js": "^0.2.4"
+  },
+  "devDependencies": {
+    "chiasm": "^0.2.1"
   }
 }

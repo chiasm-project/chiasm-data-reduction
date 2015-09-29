@@ -3,6 +3,9 @@
 // https://github.com/chiasm-project/chiasm-data-reduction
 
 var DataReduction = require("data-reduction");
+var ChiasmComponent = require("chiasm-component");
+var Model = require("model-js");
+
 function ChiasmDataReduction (){
 
   var my = new ChiasmComponent({
@@ -25,3 +28,4 @@ function ChiasmDataReduction (){
 
   return my;
 }
+module.exports = ChiasmDataReduction;
