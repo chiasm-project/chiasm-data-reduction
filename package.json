@@ -4,6 +4,7 @@
   "description": "A Chiasm component for aggregation and filtering.",
   "main": "index.js",
   "scripts": {
+    "pretest": "browserify -g browserify-shim -o chiasm-data-reduction.js -s ChiasmDataReduction index.js",
     "test": "mocha"
   },
   "repository": {
@@ -24,10 +25,23 @@
   "homepage": "https://github.com/chiasm-project/chiasm-data-reduction",
   "dependencies": {
     "chiasm-component": "^0.2.1",
-    "data-reduction": "^0.1.1",
+    "d3": "^3.5.6",
     "model-js": "^0.2.4"
   },
   "devDependencies": {
+    "browserify": "^11.2.0",
+    "browserify-shim": "^3.8.10",
+    "browserify-versionify": "^1.0.6",
     "chiasm": "^0.2.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-versionify"
+    ]
+  },
+  "browserify-shim": {
+    "chiasm-component": "global:ChiasmComponent",
+    "model-js": "global:Model",
+    "d3": "global:d3"
   }
 }
