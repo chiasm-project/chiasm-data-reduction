@@ -1,6 +1,6 @@
 {
   "name": "chiasm-data-reduction",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Chiasm component for aggregation and filtering.",
   "main": "index.js",
   "scripts": {
