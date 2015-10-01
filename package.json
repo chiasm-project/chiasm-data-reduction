@@ -26,6 +26,7 @@
   "dependencies": {
     "chiasm-component": "^0.2.1",
     "d3": "^3.5.6",
+    "data-reduction": "^0.1.2",
     "model-js": "^0.2.4"
   },
   "devDependencies": {
@@ -33,11 +34,6 @@
     "browserify-shim": "^3.8.10",
     "browserify-versionify": "^1.0.6",
     "chiasm": "^0.2.1"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-versionify"
-    ]
   },
   "browserify-shim": {
     "chiasm-component": "global:ChiasmComponent",

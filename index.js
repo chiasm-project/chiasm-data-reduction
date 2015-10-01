@@ -1,5 +1,4 @@
 // chiasm-data-reduction
-// v__VERSION__
 // https://github.com/chiasm-project/chiasm-data-reduction
 
 var DataReduction = require("data-reduction");
