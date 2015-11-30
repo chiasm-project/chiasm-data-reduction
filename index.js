@@ -22,7 +22,7 @@ function ChiasmDataReduction (){
       options.aggregate = aggregate;
     }
 
-    my.datasetOut = DataReduction(datasetIn.data, options);
+    my.datasetOut = DataReduction(datasetIn, options);
   });
 
   return my;

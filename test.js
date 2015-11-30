@@ -1,6 +1,7 @@
 var assert = require("assert"),
     Chiasm = require("chiasm"),
-    ChiasmDataReduction = require("./index");
+    ChiasmDataReduction = require("./index"),
+    ChiasmDataset = require("chiasm-dataset");
 
 describe("chiasm-data-reduction", function () {
 
@@ -38,15 +39,25 @@ describe("chiasm-data-reduction", function () {
           { foo: "C", bar: 3 },
           { foo: "C", bar: 6 },
           { foo: "C", bar: 4 } // C sum = 20, count = 5
-        ]
+        ],
+        metadata: {
+          columns:[
+            { name: "foo", type: "string" },
+            { name: "bar", type: "number" }
+          ]
+        }
       };
-      reduction.when("datasetOut", function (result){
-        assert.equal(result.data.length, 3);
-        assert.equal(where(result, "foo", "A")[0].total, 3);
-        assert.equal(where(result, "foo", "B")[0].total, 2);
-        assert.equal(where(result, "foo", "C")[0].total, 5);
-        assert.equal(where(result, "foo", "A")[0].total, 3);
-        done();
+
+      ChiasmDataset.validate(reduction.datasetIn).then(function (){
+        reduction.when("datasetOut", function (result){
+          assert.equal(result.data.length, 3);
+          assert.equal(where(result, "foo", "A")[0].total, 3);
+          assert.equal(where(result, "foo", "B")[0].total, 2);
+          assert.equal(where(result, "foo", "C")[0].total, 5);
+          assert.equal(where(result, "foo", "A")[0].total, 3);
+
+          ChiasmDataset.validate(result).then(done, console.log);
+        });
       });
     });
   });
