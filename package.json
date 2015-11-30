@@ -25,7 +25,6 @@
   "homepage": "https://github.com/chiasm-project/chiasm-data-reduction",
   "dependencies": {
     "chiasm-component": "^0.2.3",
-    "d3": "^3.5.6",
     "data-reduction": "^0.3.0",
     "model-js": "^0.2.4"
   },
