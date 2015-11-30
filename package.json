@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/chiasm-project/chiasm-data-reduction",
   "dependencies": {
-    "chiasm-component": "^0.2.2",
+    "chiasm-component": "^0.2.3",
     "d3": "^3.5.6",
     "data-reduction": "^0.3.0",
     "model-js": "^0.2.4"
@@ -33,7 +33,7 @@
     "browserify": "^11.2.0",
     "browserify-shim": "^3.8.10",
     "browserify-versionify": "^1.0.6",
-    "chiasm": "^0.2.2",
+    "chiasm": "^0.2.3",
     "chiasm-dataset": "^0.1.0"
   },
   "browserify-shim": {
