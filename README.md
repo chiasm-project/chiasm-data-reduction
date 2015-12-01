@@ -54,8 +54,6 @@ chiasm.getComponent("reduction").then(function (reduction){
     done();
   });
 });
-});
-});
 
 function where(result, column, value){
   return result.data.filter(function (d) {
